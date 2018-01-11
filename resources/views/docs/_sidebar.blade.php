@@ -29,15 +29,15 @@
         Modules Development
     </li>
     <li class="list-group-item">
-        <a href="{{ route('docs.index',['viewName' => 'module.provider']) }}">Module Service Provider</a>
+        <a href="{{ route('docs.index',['viewName' => 'module-provider']) }}">Module Service Provider</a>
     </li>
 
     <li class="list-group-item">
-        <a href="{{ route('docs.index',['viewName' => 'module.routes']) }}">Module Routes</a>
+        <a href="{{ route('docs.index',['viewName' => 'module-routes']) }}">Module Routes</a>
     </li>
 
     <li class="list-group-item">
-        <a href="{{ route('docs.index',['viewName' => 'module.views']) }}">Module Views</a>
+        <a href="{{ route('docs.index',['viewName' => 'module-views']) }}">Module Views</a>
     </li>
 
 </ul>
@@ -47,7 +47,7 @@
         Theme Development
     </li>
     <li class="list-group-item">
-        <a href="{{ route('docs.index',['viewName' => 'theme.create']) }}">Theme Create</a>
+        <a href="{{ route('docs.index',['viewName' => 'theme-create']) }}">Theme Create</a>
     </li>
 
 </ul>

@@ -9,6 +9,8 @@ class DocController extends Controller
 
 
         $viewName = ($viewName === null) ? "installation" : "$viewName";
+
+        $viewName = str_replace('-','.', $viewName);
         return view('docs.'. $viewName);
 
     }

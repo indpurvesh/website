@@ -14,9 +14,24 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul class="nav navbar-nav">
 
+
+                @if(Auth::user()->email == "ind.purvesh@gmail.com")
+
+                    <li class="nav-item "><a class="nav-link"
+                                             title="Mage2 Issue Management"
+                                             href="{{ route('issue.index') }}">Issues</a></li>
+
+
+                @endif
+
+
+
                 <li class="nav-item "><a class="nav-link"
                                          title="Demo Mage2 E commerce"
                                          href="http://demo.mage2.website">Demo</a></li>
+
+
+
 
                 <li class="nav-item ">
                     <a class="nav-link"

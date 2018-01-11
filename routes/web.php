@@ -23,6 +23,9 @@ Route::get('/', 'HomeController@index');
 
 Route::get('/forum', ['as' => 'forum.index','uses' => 'ForumController@index']);
 
+Route::resource('/issue','IssueController');
+
+
 
 Route::resource('/category','CategoryController');
 Route::resource('/forum/{category}/post','PostController',['as' => 'forum']);
