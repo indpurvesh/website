@@ -19,10 +19,18 @@ class CreatePostsTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->integer('parent_id')->nullable()->default(NULL);
 
+            $table->integer('category_id')->unsigned()->nullable()->default(NULL);
+
             $table->string('title');
             $table->string('slug');
             $table->text('content');
             $table->timestamps();
+
+
+            $table->foreign('category_id')
+                ->references('id')->on('categories')
+                ->onDelete('cascade');
+
         });
     }
 

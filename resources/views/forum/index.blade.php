@@ -53,16 +53,23 @@
                         {{ $category->postCounts }}
                     </td>
 
-                    <?php
-                    $lastPost = $category->lastPost;
-                    $name = "No User";
-                    if (isset($lastPost->user->name)) {
-                        $name = $lastPost->user->name;
-                    }
-                    ?>
-                    <td class="hidden-xs  hidden-sm">by <span >{{ $lastPost->user->name }}</span><br>
-                        <small><i class="oi oi-star"></i>{{ $lastPost->created_at->diffForHumans() }}</small>
-                    </td>
+
+                    @if($category->lastPost !== null)
+
+                        <td class="hidden-xs  hidden-sm">by <span >{{ $category->lastPost->user->name }}</span><br>
+                            <small><i class="oi oi-star"></i>{{ $category->lastPost->created_at->diffForHumans() }}</small>
+                        </td>
+
+
+                    @else
+
+                        <td class="hidden-xs  hidden-sm">by <span >No User</span><br>
+                            <small><i class="oi oi-star"></i></small>
+                        </td>
+
+
+                    @endif
+
                 </tr>
             @endforeach
             </tbody>
